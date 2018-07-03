@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Button from 'react-bootstrap/lib/Button';
 import Tabs from 'react-bootstrap/lib/Tabs';
 import Tab from 'react-bootstrap/lib/Tab';
+import Button from "../../components/CustomButton/CustomButton.jsx";
 
 
 const wellStyles = { maxWidth: 400, margin: '0 auto 10px' };
@@ -65,8 +65,8 @@ const content = posts.map((post) =>
       <h4 className="strong btn-link">{post.jobTitle}</h4>
       <div>{post.jobCompany}</div>
       <p>{post.jobDesc}</p></div>
-      <div className="col-md-4" style={paddingTop}>
-        <Button className="col-md-6" bsStyle="primary" style={whiteSpace}>
+      <div className="col-md-4" style={paddingTop}>     
+        <Button bsStyle="info" fill  type="submit">
             Apply for job
         </Button>
       </div>

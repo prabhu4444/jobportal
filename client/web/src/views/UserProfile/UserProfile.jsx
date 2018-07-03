@@ -34,7 +34,7 @@ class UserProfile extends Component {
                           type: "text",
                           bsClass: "form-control",
                           placeholder: "Username",
-                          defaultValue: "michael23"
+                          defaultValue: "Chaitanya"
                         },
                         {
                           label: "Email address",
@@ -52,56 +52,35 @@ class UserProfile extends Component {
                           type: "text",
                           bsClass: "form-control",
                           placeholder: "First name",
-                          defaultValue: "Mike"
+                          defaultValue: "Chaitanya"
                         },
                         {
                           label: "Last name",
                           type: "text",
                           bsClass: "form-control",
                           placeholder: "Last name",
-                          defaultValue: "Andrew"
+                          defaultValue: "B"
                         }
                       ]}
-                    />
-                    <FormInputs
-                      ncols={["col-md-12"]}
-                      proprieties={[
+                    />    
+                     <FormInputs
+                      ncols={["col-md-3", "col-md-4"]}
+                      proprieties={[                        
                         {
-                          label: "Adress",
-                          type: "text",
-                          bsClass: "form-control",
-                          placeholder: "Home Adress",
-                          defaultValue:
-                            "Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09"
-                        }
-                      ]}
-                    />
-                    <FormInputs
-                      ncols={["col-md-4", "col-md-4", "col-md-4"]}
-                      proprieties={[
-                        {
-                          label: "City",
-                          type: "text",
-                          bsClass: "form-control",
-                          placeholder: "City",
-                          defaultValue: "Mike"
-                        },
-                        {
-                          label: "Country",
-                          type: "text",
-                          bsClass: "form-control",
-                          placeholder: "Country",
-                          defaultValue: "Andrew"
-                        },
-                        {
-                          label: "Postal Code",
+                          label: "Year's of Experience",
                           type: "number",
                           bsClass: "form-control",
-                          placeholder: "ZIP Code"
+                          placeholder: "Experience",
+                          defaultValue: "0"
+                        },
+                        {
+                          label: "When can u join?",
+                          type: "number",
+                          bsClass: "form-control",
+                          placeholder: "days"
                         }
                       ]}
-                    />
-
+                    />              
                     <Row>
                       <Col md={12}>
                         <FormGroup controlId="formControlsTextarea">
@@ -110,8 +89,8 @@ class UserProfile extends Component {
                             rows="5"
                             componentClass="textarea"
                             bsClass="form-control"
-                            placeholder="Here can be your description"
-                            defaultValue="Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo."
+                            placeholder="About you"
+                            defaultValue="Please give a description about yourself"
                           />
                         </FormGroup>
                       </Col>
@@ -126,35 +105,170 @@ class UserProfile extends Component {
             </Col>
             <Col md={4}>
               <UserCard
-                bgImage="https://ununsplash.imgix.net/photo-1431578500526-4d9613015464?fit=crop&fm=jpg&h=300&q=75&w=400"
+                bgImage="https://ss7.vzw.com/is/image/VerizonWireless/landing-page-for-deals-hero-m-06142018-1?h=300&w=400"
                 avatar={avatar}
-                name="Mike Andrew"
-                userName="michael24"
+                name="Chaitanya B"
+                userName="chaitanya"
                 description={
                   <span>
-                    "Lamborghini Mercy
+                    React Native
                     <br />
-                    Your chick she so thirsty
+                    Android
                     <br />
-                    I'm in that two seat Lambo"
+                   Graph ML
                   </span>
-                }
-                socials={
-                  <div>
-                    <Button simple>
-                      <i className="fa fa-facebook-square" />
-                    </Button>
-                    <Button simple>
-                      <i className="fa fa-twitter" />
-                    </Button>
-                    <Button simple>
-                      <i className="fa fa-google-plus-square" />
-                    </Button>
-                  </div>
-                }
+                }                
               />
             </Col>
           </Row>
+          <Row>
+            <Col md={8}>
+            <Card
+                title="Education details"
+                content={
+                  <form>
+                    <FormInputs
+                      ncols={["col-md-3","col-md-4"]}
+                      proprieties={[                        
+                        {
+                          label: "Degree",
+                          type: "text",
+                          bsClass: "form-control",
+                          placeholder: "Degree",
+                          defaultValue: "Bachlor of Engineering"
+                        },
+                        {
+                          label: "School",
+                          type: "text",
+                          bsClass: "form-control",
+                          placeholder: "School"
+                        }
+                      ]}
+                    />
+                    <FormInputs
+                      ncols={["col-md-3", "col-md-4"]}
+                      proprieties={[
+                        {
+                          label: "Field of study",
+                          type: "text",
+                          bsClass: "form-control",
+                          placeholder: "First name",
+                          defaultValue: "Computer science"
+                        },
+                        {
+                          label: "Pass out",
+                          type: "date",
+                          bsClass: "form-control",
+                          placeholder: "Year",
+                          defaultValue: "2016"
+                        }
+                      ]}
+                    /> 
+                              
+                    <FormGroup controlId="formControlsTextarea">
+                          <ControlLabel>About Me</ControlLabel>
+                          <FormControl
+                            rows="5"
+                            componentClass="textarea"
+                            bsClass="form-control"
+                            placeholder="About you"
+                            defaultValue="Please give a description about yourself"
+                          />
+                        </FormGroup>    
+                   
+                    <Button bsStyle="info" pullRight fill type="submit">
+                      Save
+                    </Button>
+                    <div className="clearfix" />
+                  </form>
+                }
+              />   
+            </Col>
+            </Row>
+          <Row>
+            <Col md={8}>
+            <Card
+                title="Work Experience"
+                content={
+                  <form>
+                    <FormInputs
+                      ncols={["col-md-3"]}
+                      proprieties={[                        
+                        {
+                          label: "Job Title",
+                          type: "text",
+                          bsClass: "form-control",
+                          placeholder: "title",
+                          defaultValue: "Principal apps"
+                        }
+                      ]}
+                    />
+                    <FormInputs
+                      ncols={["col-md-6"]}
+                      proprieties={[
+                        {
+                          label: "Company",
+                          type: "text",
+                          bsClass: "form-control",
+                          placeholder: "First name",
+                          defaultValue: "Oracle"
+                        }
+                      ]}
+                    />     
+                     <FormInputs
+                      ncols={["col-md-6"]}
+                      proprieties={[
+                        {
+                          label: "City",
+                          type: "text",
+                          bsClass: "form-control",
+                          placeholder: "City",
+                          defaultValue: "Hyderabad"
+                        }
+                      ]}
+                    />    
+                     <FormInputs
+                      ncols={["col-md-3","col-md-4"]}
+                      proprieties={[
+                        {
+                          label: "From",
+                          type: "date",
+                          bsClass: "form-control",
+                          placeholder: "date",
+                          defaultValue: ""
+                        },
+                        {
+                          label: "To",
+                          type: "date",
+                          bsClass: "form-control",
+                          placeholder: "date",
+                          defaultValue: ""
+                        }
+                      ]}
+                    />    
+                    <Row>
+                      <Col md={12}>
+                        <FormGroup controlId="formControlsTextarea">
+                          <ControlLabel>Description</ControlLabel>
+                          <FormControl
+                            rows="5"
+                            componentClass="textarea"
+                            bsClass="form-control"
+                            placeholder="Description"
+                            defaultValue=""
+                          />
+                        </FormGroup>
+                      </Col>
+                    </Row>
+                    <Button bsStyle="info" pullRight fill type="submit">
+                      Save
+                    </Button>
+                    <div className="clearfix" />
+                  </form>
+                }
+              />   
+            </Col>
+            </Row>  
         </Grid>
       </div>
     );

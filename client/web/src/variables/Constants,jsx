@@ -1,0 +1,11 @@
+// declare constant required globally here
+
+var devUrl = 'http://localhost:8080/';
+var prodUrl = 'http://';
+
+var serverUrl = devUrl;
+
+//actions
+let updateUser = 'updateuser';
+let signIn = 'signIn';
+let sigUp = 'signUp';
