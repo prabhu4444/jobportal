@@ -143,16 +143,12 @@ class UserProfile extends Component {
               <UserCard
                 bgImage="https://ss7.vzw.com/is/image/VerizonWireless/landing-page-for-deals-hero-m-06142018-1?h=300&w=400"
                 avatar={avatar}
-                name="Chaitanya B"
-                userName="chaitanya"
+                name="Chaitanya B"               
                 description={
-                  <span>
-                    React Native
-                    <br />
-                    Android
-                    <br />
-                   Graph ML
-                  </span>
+                  <Button style={{marginTop:10}} bsStyle="info" fill type="submit"
+                      onPress>
+                      Upload Resume
+                    </Button>
                 }                
               />
             </Col>

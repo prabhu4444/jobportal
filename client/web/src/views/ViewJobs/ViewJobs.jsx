@@ -20,6 +20,7 @@ class ControlledTabs extends React.Component {
     this.state = {
       key: 1     
     };
+    SessionHelper("Hello");
   }
   
   handleSelect(key) {   
