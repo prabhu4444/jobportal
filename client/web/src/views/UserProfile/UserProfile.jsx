@@ -27,16 +27,8 @@ class UserProfile extends Component {
                 content={
                   <form>
                     <FormInputs
-                      ncols={["col-md-5", "col-md-3", "col-md-4"]}
-                      proprieties={[
-                        {
-                          label: "Company (disabled)",
-                          type: "text",
-                          bsClass: "form-control",
-                          placeholder: "Company",
-                          defaultValue: "Creative Code Inc.",
-                          disabled: true
-                        },
+                      ncols={["col-md-3", "col-md-4"]}
+                      proprieties={[                        
                         {
                           label: "Username",
                           type: "text",
@@ -163,7 +155,7 @@ class UserProfile extends Component {
               />
             </Col>
           </Row>
-        </Grid>>
+        </Grid>
       </div>
     );
   }
