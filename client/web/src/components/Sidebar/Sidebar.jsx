@@ -7,6 +7,7 @@ import logo from "../../assets/img/reactlogo.png";
 import vzlogo from "../../assets/img/vzw.png";
 
 import dashboardRoutes from "../../routes/dashboard.jsx";
+import candidateDashBoardRoutes from "../../routes/candidatedashboard.jsx";
 
 class Sidebar extends Component {
   constructor(props) {
@@ -25,6 +26,37 @@ class Sidebar extends Component {
     this.updateDimensions();
     window.addEventListener("resize", this.updateDimensions.bind(this));
   }
+
+  renderSidebar = () => {
+    var isCandidate = 0;//props.user.type;
+    var routes = isCandidate == false ? dashboardRoutes : candidateDashBoardRoutes;
+    return (
+      routes.map((prop, key) => {
+        if (!prop.redirect)
+          return (
+            <li
+              className={
+                prop.upgrade
+                  ? "active active-pro"
+                  : this.activeRoute(prop.path)
+              }
+              key={key}
+            >
+              <NavLink
+                to={prop.path}
+                className="nav-link"
+                activeClassName="active"
+              >
+                <i className={prop.icon} />
+                <p>{prop.name}</p>
+              </NavLink>
+            </li>
+          );
+        return null;
+      })
+    );
+  }
+  
   render() {
    
     return (
@@ -46,29 +78,7 @@ class Sidebar extends Component {
         <div className="sidebar-wrapper">
           <ul className="nav">
             {this.state.width <= 991 ? <HeaderLinks /> : null}
-            {dashboardRoutes.map((prop, key) => {
-              if (!prop.redirect)
-                return (
-                  <li
-                    className={
-                      prop.upgrade
-                        ? "active active-pro"
-                        : this.activeRoute(prop.path)
-                    }
-                    key={key}
-                  >
-                    <NavLink
-                      to={prop.path}
-                      className="nav-link"
-                      activeClassName="active"
-                    >
-                      <i className={prop.icon} />
-                      <p>{prop.name}</p>
-                    </NavLink>
-                  </li>
-                );
-              return null;
-            })}
+            {this.renderSidebar()}
           </ul>
         </div>
       </div>

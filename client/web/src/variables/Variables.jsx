@@ -247,15 +247,16 @@ var style = {
 // // // For tables
 // //
 //
-const thArray = ["ID", "Name", "Salary", "Country", "City"];
+const thArray = ["ID", "Name", "Status", "last updated"];
 const tdArray = [
-  ["1", "Dakota Rice", "$36,738", "Niger", "Oud-Turnhout"],
-  ["2", "Minerva Hooper", "$23,789", "Curaçao", "Sinaai-Waas"],
-  ["3", "Sage Rodriguez", "$56,142", "Netherlands", "Baileux"],
-  ["4", "Philip Chaney", "$38,735", "Korea, South", "Overland Park"],
-  ["5", "Doris Greene", "$63,542", "Malawi", "Feldkirchen in Kärnten"],
-  ["6", "Mason Porter", "$78,615", "Chile", "Gloucester"]
+  ["1", "Tapan Bansal", "Shortlisted", "03/07/2018","Send Email","Schedule"],
+  ["2", "Sunil Manyam", "Applied", "03/07/2018","Send Email","Schedule"],
+  ["3", "Lavanya", "In Review", "03/07/2018","Send Email","Schedule"],
+  ["4", "Santosh", "Scheduled", "03/07/2018","Send Email","Schedule"],
+  ["5", "Chaitanya", "Rejected", "03/07/2018","Send Email","Schedule"]
 ];
+
+const jobStatus = ["Applied","InReview","Shortlisted","Scheduled","InVerification","Offered","Rejected"];
 
 //
 // //
@@ -579,6 +580,16 @@ var legendBar = {
   types: ["info", "danger"]
 };
 
+
+
+const serverUrl = "http://localhost:8080/";
+
+var actions = {
+  updateUser : "updateuser",
+  signIn : "signIn",
+  sigUp : "signUp"
+};
+
 module.exports = {
   style, // For notifications (App container and Notifications view)
   thArray,
@@ -593,5 +604,7 @@ module.exports = {
   dataBar,
   optionsBar,
   responsiveBar,
+  serverUrl,
+  actions,
   legendBar // For charts (Dashboard view)
 };

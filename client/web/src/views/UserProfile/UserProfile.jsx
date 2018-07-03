@@ -12,10 +12,45 @@ import { Card } from "../../components/Card/Card.jsx";
 import { FormInputs } from "../../components/FormInputs/FormInputs.jsx";
 import { UserCard } from "../../components/UserCard/UserCard.jsx";
 import Button from "../../components/CustomButton/CustomButton.jsx";
-
+import axios from 'axios';
 import avatar from "../../assets/img/faces/face-0.jpg";
+import { serverUrl } from "../../variables/Variables.jsx";
 
 class UserProfile extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      profile : {},
+      education : {},
+      work: {}
+    }
+  }
+
+  componentWillMount() {
+
+  }
+
+  updateProfile() {
+    console.log("update profile");
+    var headers =  {
+      'Content-Type': 'application/json'
+    };
+
+    let data = JSON.stringify({
+      "hello":"world"
+    });
+
+    axios.post("http://www.mocky.io/v2/5b3b885b3300006500599d14", data, headers)
+      .then((response) => {
+        this.setState(response);
+        console.log(this.state);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
+  
   render() {
     return (
       <div className="content">
@@ -95,7 +130,8 @@ class UserProfile extends Component {
                         </FormGroup>
                       </Col>
                     </Row>
-                    <Button bsStyle="info" pullRight fill type="submit">
+                    <Button bsStyle="info" pullRight fill type="submit"
+                      onPress>
                       Update Profile
                     </Button>
                     <div className="clearfix" />
@@ -176,8 +212,8 @@ class UserProfile extends Component {
                           />
                         </FormGroup>    
                    
-                    <Button bsStyle="info" pullRight fill type="submit">
-                      Save
+                    <Button bsStyle="info" pullRight fill onClick={this.updateProfile.bind(this)}>
+                      Save Education
                     </Button>
                     <div className="clearfix" />
                   </form>
