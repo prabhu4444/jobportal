@@ -1,25 +1,31 @@
 import React, { Component } from 'react';
 import Tabs from 'react-bootstrap/lib/Tabs';
 import Tab from 'react-bootstrap/lib/Tab';
+
 import Button from "../../components/CustomButton/CustomButton.jsx";
+
+import { Form, FormControl,FormGroup,  Row, Col, Alert } from "react-bootstrap";
+import { FormInputs } from "../../components/FormInputs/FormInputs.jsx";
+
 
 
 const wellStyles = { maxWidth: 400, margin: '0 auto 10px' };
 const borderBtm = {borderBottom:'1px solid #ddd'};
 const paddingTop = {padding:'10px 0px'};
 const whiteSpace = {whiteSpace:'normal'};
+const jobDescription ="";
 
 class ControlledTabs extends React.Component {
   constructor(props, context) {
     super(props, context);
 
     this.handleSelect = this.handleSelect.bind(this);
-
+    //this.handleClick = this.handleClick.bind(this);
     this.state = {
       key: 1
     };
   }
-
+  
   handleSelect(key) {   
     this.setState({ key });
   }
@@ -28,18 +34,32 @@ class ControlledTabs extends React.Component {
       <Tabs
         activeKey={this.state.key}
         onSelect={this.handleSelect}
-        id="controlled-tab-example"
-      >
+        id="controlled-tab-example">
         <Tab eventKey={1} title="View Jobs">
         <p>View all jobs:</p>
+        <form><FormInputs
+            ncols={["col-md-5"]}
+            proprieties={[
+
+                {
+                label: "Search Jobs",
+                type: "text",
+                bsClass: "form-control",
+                placeholder: "Search Jobs"
+                }
+            ]}
+           /></form>
+         
           {content}
         </Tab>
-        <Tab eventKey={2} title="Applied Jobs">
-          <p> Applied Jobs:</p>
+        <Tab eventKey={2} title="Applied Jobs">      
           {appliedContent}
         </Tab>
         <Tab eventKey={3} title="Shortlisted" disabled>
           Tab 3 content
+        </Tab>
+        <Tab eventKey={4} title="Job Description" disabled>
+          {jobDescription}
         </Tab>
       </Tabs>
     );
@@ -85,11 +105,9 @@ const content = posts.map((post) =>
 class ViewJobs extends Component {
   render() {
     return (
-      <div className="App">
-        
+      <div className="App">        
         <div className="col-md-12">
-          <p className="App-intro col-md-12"> All the jobs list, Applied jobs can be shown:</p>
-                  
+          <p className="App-intro col-md-12"> All the jobs list, Applied jobs can be shown:</p>                  
           <div><ControlledTabs/></div>
         </div>          
       </div>
