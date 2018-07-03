@@ -3,7 +3,6 @@ import { NavLink } from "react-router-dom";
 
 import HeaderLinks from "../Header/HeaderLinks.jsx";
 
-import imagine from "../../assets/img/sidebar-3.jpg";
 import logo from "../../assets/img/reactlogo.png";
 import vzlogo from "../../assets/img/vzw.png";
 
@@ -27,9 +26,7 @@ class Sidebar extends Component {
     window.addEventListener("resize", this.updateDimensions.bind(this));
   }
   render() {
-    const sidebarBackground = {
-      backgroundImage: "url(" + imagine + ")"
-    };
+   
     return (
       <div
         id="sidebar"
@@ -40,9 +37,9 @@ class Sidebar extends Component {
         <div className="logo">
           
             <div className="logo-img">
-              <img src={vzlogo} alt="logo_image" />
+              <img src={vzlogo} align="middle" alt="logo_image" />
             </div>
-            <div>
+            <div style={{textAlign:"center",fontWeight:"bold",marginTop:10}}>
              Careers
             </div>  
         </div>
