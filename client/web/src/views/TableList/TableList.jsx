@@ -7,17 +7,24 @@ import Button from "../../components/CustomButton/CustomButton.jsx";
 
 class TableList extends Component {
 
-  renderDropdownButton= (title,i) => {
+  constructor(props) {
+    super(props);
+    this.state = {
+      tdArray : tdArray
+    };
+  }
+
+  renderDropdownButton= (title,index) => {
     const jobStatus1 = ["Applied","InReview","Shortlisted","Scheduled","InVerification","Offered","Rejected"];
     return(
       <DropdownButton id={"exampleId"} title={title}>
-          {Object.values(jobStatus1).map(key => <MenuItem eventKey={key} onSelect={() => this.title} >{key}</MenuItem>)}
+          {Object.values(jobStatus1).map(key => <MenuItem eventKey={key} onSelect= {this.onTargetSelect} >{key}</MenuItem>)}
         </DropdownButton>
     );
   } 
 
-  onTargetSelect(key){
-    
+  onTargetSelect = (key) => {
+    console.log(key);
   }
 
   render() {
@@ -41,7 +48,7 @@ class TableList extends Component {
                       </tr>
                     </thead>
                     <tbody>
-                      {tdArray.map((prop, key) => {
+                      {this.state.tdArray.map((prop, key) => {
                         return (
                           <tr key={key}>
                             {prop.map((prop, key) => {

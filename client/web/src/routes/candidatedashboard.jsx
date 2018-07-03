@@ -18,12 +18,6 @@ const candidateDashBoardRoutes = [
     component: UserProfile
   },
   { path: "/maps", name: "Maps", icon: "pe-7s-map-marker", component: Maps },
-  {
-    path: "/notifications",
-    name: "Notifications",
-    icon: "pe-7s-bell",
-    component: Notifications
-  },
   //default to view jobs
   { redirect: true, path: "/", to: "/ViewJobs", name: "ViewJobs" }
 ];

@@ -580,7 +580,7 @@ var legendBar = {
   types: ["info", "danger"]
 };
 
-
+const loggedInUser = "abc@gmail.com";
 
 const serverUrl = "http://localhost:8080/";
 
@@ -606,5 +606,6 @@ module.exports = {
   responsiveBar,
   serverUrl,
   actions,
+  loggedInUser,
   legendBar // For charts (Dashboard view)
 };

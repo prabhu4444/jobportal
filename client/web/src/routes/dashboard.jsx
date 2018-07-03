@@ -29,12 +29,6 @@ const dashboardRoutes = [
   },
   { path: "/maps", name: "Maps", icon: "pe-7s-map-marker", component: Maps },
   {
-    path: "/notifications",
-    name: "Notifications",
-    icon: "pe-7s-bell",
-    component: Notifications
-  },
-  {
     path: "/signin",
     name: "SignIn",
     icon: "pe-7s-bell",
