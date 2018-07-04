@@ -1,0 +1,66 @@
+[
+  {
+    "jobId": "1",
+    "jobTitle": "Front end UI Developer",
+    "jobDescription": "Must have experience with Angular, React, Node JS",
+    "skills": "React, Angular, JS, Jquery",
+    "portfolio": "Verizon",
+    "status": "Open"
+  },
+  {
+    "jobId": "2",
+    "jobTitle": "Server Developer",
+    "jobDescription": "Must have experience with Spring boot, Micro servcies, Oracle",
+    "skills": "Spring Boot, Hibernate, Postgress",
+    "portfolio": "IBM",
+    "status": "Open"
+  },
+  {
+    "jobId": "3",
+    "jobTitle": "Server Lead",
+    "jobDescription": "Must have experience with Spring boot, Micro servcies, Oracle",
+    "skills": "Spring Boot, Hibernate, Postgress",
+    "portfolio": "Accenture",
+    "status": "Open"
+  },
+  {
+    "jobId": "4",
+    "jobTitle": "Front end UI Lead",
+    "jobDescription": "Must have experience with Angular, React, Node JS",
+    "skills": "React, Angular, JS, Jquery",
+    "portfolio": "Infosys",
+    "status": "Open"
+  },
+  {
+    "jobId": "5",
+    "jobTitle": "Front End / UI Developer - Lead",
+    "jobDescription": "Must have experience with Angular, React, Node JS.",
+    "skills": "React, Angular, JS, Jquery",
+    "portfolio": "Verizon",
+    "status": "Open"
+  },
+  {
+    "jobId": "6",
+    "jobTitle": "Embedded Developer",
+    "jobDescription": "Front-end development skills with React JS, Angular.",
+    "skills": "React, Angular, JS, Jquery",
+    "portfolio": "Verizon",
+    "status": "Open"
+  },
+  {
+    "jobId": "7",
+    "jobTitle": "Senior Java Developer",
+    "jobDescription": "Java, javascript, and React are high on our list. (Other notables: Python,Ruby, Scala, .NET, Clojure.)",
+    "skills": "Java, javascript, and React",
+    "portfolio": "Verizon",
+    "status": "Closed"
+  },
+  {
+    "jobId": "8",
+    "jobTitle": "Database Developer – Senior Consultant",
+    "jobDescription": "Core responsibilities include disaster recovery, performance analysis and tuning and database maintenance.",
+    "skills": "SQL, PL SQL",
+    "portfolio": "Verizon",
+    "status": "Open"
+  }
+]
