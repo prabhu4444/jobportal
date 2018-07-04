@@ -16,6 +16,8 @@ import { FormInputs } from "./components/FormInputs/FormInputs.jsx";
 import Button from "./components/CustomButton/CustomButton.jsx";
 import { Card } from "./components/Card/Card";
 
+const marginTop = {marginTop:"5%"};
+
 class SignIn extends Component {
   constructor(props, context) {
       super(props, context);  
@@ -35,7 +37,7 @@ class SignIn extends Component {
   
   render() {
       return (
-          <div className="content col-md-offset-3 col-md-6">
+          <div className="content col-md-offset-3 col-md-6" style={marginTop}>
               <Card
                   title="Sign In"
                   content={
@@ -67,7 +69,7 @@ class SignIn extends Component {
                                       label: "Email address",
                                       type: "email",
                                       bsClass: "form-control",
-                                      placeholder: "Email"
+                                      defaultValue: "reactwarriors@verizon.com"
                                       }
                                   ]}
                                   />
@@ -78,7 +80,7 @@ class SignIn extends Component {
                                       label: "Password",
                                       type: "email",
                                       bsClass: "form-control",
-                                      placeholder: "Password"
+                                      defaultValue: "*********"
                                       }
                                   ]}
                           />
