@@ -118,7 +118,7 @@ const posts = [
 ];
 
 const appliedPosts = [
-  {jobId: 1, jobTitle: 'Front End / UI Developer - Lead',jobCompany:'Verizon', jobDesc: 'Must have experience with Angular, React, Node JS. Albin Engineering Services'}  
+  {jobId: 1, jobTitle: 'Front End / UI Developer',jobCompany:'Verizon', jobDesc: 'Must have experience with Angular, React, Node JS. Albin Engineering Services'}  
 ];
 
 //View Jobs
