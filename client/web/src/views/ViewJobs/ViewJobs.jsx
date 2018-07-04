@@ -4,6 +4,7 @@ import Tab from 'react-bootstrap/lib/Tab';
 import Button from "../../components/CustomButton/CustomButton.jsx";
 import { Form,FormControl,FormGroup,Row,Col,Alert,Modal } from "react-bootstrap";
 import { FormInputs } from "../../components/FormInputs/FormInputs.jsx";
+import Loader from 'react-loader-spinner';
 
 const wellStyles = { maxWidth: 400, margin: '0 auto 10px' };
 const borderBtm = {borderBottom:'1px solid #ddd'};
@@ -11,23 +12,52 @@ const paddingTop = {padding:'10px 0px'};
 const whiteSpace = {whiteSpace:'normal'};
 const jobDescription ="";
 
+class LoaderTxt extends Component {
+  //other logic
+    render() {
+	 return(
+	  <Loader 
+	     type="Puff"
+	     color="#00BFFF"
+	     height="100"	
+	     width="100"
+	  />   
+	   );
+    }
+ }
+
 class ControlledTabs extends React.Component {
   constructor(props, context) {
     super(props, context);
 
     this.handleSelect = this.handleSelect.bind(this);
-    //this.handleClick = this.handleClick.bind(this);
+    this.applyJob = this.applyJob.bind(this);
     this.state = {
       key: 1     
     };
-   // SessionHelper("Hello");
   }
-  
+   // SessionHelper("Hello");  
   handleSelect(key) {   
     this.setState({ key });
   }
+   applyJob(){
+     
+   }
   
   render() {
+    const content = posts.map((post) =>
+    <div key={post.jobId} className="col-md-12" style={borderBtm}>
+    <div className="col-md-8">
+      <h4 className="strong" onClick={this.handleShow}>{post.jobTitle}<JobDesc/></h4>      
+      <div>{post.jobCompany}</div>
+      <p>{post.jobDesc}</p></div>
+      <div className="col-md-4" style={paddingTop}>     
+        <Button bsStyle="info" fill  type="submit" onClick={this.applyJob}>
+            Apply for job
+        </Button>
+      </div>
+    </div>
+    );
     return (
         <div className="col-md-12">
       <Tabs
@@ -46,7 +76,8 @@ class ControlledTabs extends React.Component {
                 placeholder: "Search Jobs"
                 }
             ]}
-           /></form>       
+           /></form>  
+
           {content}
         </Tab>
         <Tab eventKey={2} title="Applied Jobs">      
@@ -74,12 +105,12 @@ class JobDesc extends Component {
       
      handleClose() {
         this.setState({ show: false });
-      }
-    
+      }    
       handleShow() {
         this.setState({ show: true });
       }
     render() {
+      //View Jobs
       // This syntax ensures `this` is bound within handleClick
       return (
           <div>
@@ -120,22 +151,6 @@ const posts = [
 const appliedPosts = [
   {jobId: 1, jobTitle: 'Front End / UI Developer',jobCompany:'Verizon', jobDesc: 'Must have experience with Angular, React, Node JS. Albin Engineering Services'}  
 ];
-
-//View Jobs
-const content = posts.map((post) =>
-    <div key={post.jobId} className="col-md-12" style={borderBtm}>
-    <div className="col-md-8">
-      <h4 className="strong" onClick={this.handleShow}>{post.jobTitle}<JobDesc/></h4>
-      
-      <div>{post.jobCompany}</div>
-      <p>{post.jobDesc}</p></div>
-      <div className="col-md-4" style={paddingTop}>     
-        <Button bsStyle="info" fill  type="submit">
-            Apply for job
-        </Button>
-      </div>
-    </div>
-  );
 
   //Applied Jobs
   const appliedContent = appliedPosts.map((post) =>
