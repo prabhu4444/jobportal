@@ -65,7 +65,7 @@ class ControlledTabs extends React.Component {
         onSelect={this.handleSelect}
         id="controlled-tab-example">
         <Tab eventKey={1} title="View Jobs">
-        <p>View all jobs:</p>
+        <p></p>
         <form><FormInputs
             ncols={["col-md-5"]}
             proprieties={[

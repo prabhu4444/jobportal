@@ -26,15 +26,23 @@ class SignIn extends Component {
         value: 'signin'
       };
   }
+  
+  componentDidMount() {
+     
+  }
 
   handleChange(e) {
+      
       this.setState({ value: 'app' });
       ReactDOM.render(
         <HashRouter1/>,
         document.getElementById("root")
       );
   }
-  
+  updatevalue(e) {
+      console.log("update value");
+      console.log(e.value);
+  }
   render() {
       return (
           <div className="content col-md-offset-3 col-md-6" style={marginTop}>
@@ -63,6 +71,7 @@ class SignIn extends Component {
                            />
                           <FormInputs
                                   ncols={["col-md-5"]}
+                                  inputref = {node => this.inputNode = node}
                                   proprieties={[
 
                                       {
@@ -75,6 +84,7 @@ class SignIn extends Component {
                                   />
                           <FormInputs
                                   ncols={["col-md-5"]}
+                                  onChange={this.updatevalue}
                                   proprieties={[
                                       {
                                       label: "Password",

@@ -49,10 +49,7 @@ goToSignIn(e) {
             <p className="hidden-lg hidden-md">Search</p>
           </NavItem>
         </Nav>
-        <Nav pullRight>
-          <NavItem eventKey={1} href="#">
-            Account
-          </NavItem>
+        <Nav pullRight>         
           <NavDropdown
             eventKey={2}
             title="Verizon Updates"
