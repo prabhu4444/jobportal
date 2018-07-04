@@ -151,7 +151,7 @@ class ViewJobs extends Component {
     return (
       <div className="App">        
         <div className="col-md-12">
-          <p className="App-intro col-md-12"> All the jobs list, Applied jobs can be shown:</p>                  
+          <p className="App-intro col-md-12"></p>                  
           <div><ControlledTabs/></div>
         </div>          
       </div>
