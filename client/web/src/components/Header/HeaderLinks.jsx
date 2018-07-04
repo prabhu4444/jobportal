@@ -1,7 +1,24 @@
 import React, { Component } from "react";
 import { NavItem, Nav, NavDropdown, MenuItem } from "react-bootstrap";
+import SignIn from "../../index.js";
+import ReactDOM from "react-dom";
 
 class HeaderLinks extends Component {
+  constructor(props, context) {
+    super(props, context);  
+    this.goToSignIn = this.goToSignIn.bind(this);  
+    this.state = {
+      value: 'signin'
+    };
+}
+
+goToSignIn(e) {
+    this.setState({ value: 'app' });
+    ReactDOM.render(
+      <SignIn/>,
+      document.getElementById("root")
+    );
+}
   render() {
     const notification = (
       <div>
@@ -48,7 +65,7 @@ class HeaderLinks extends Component {
           </NavDropdown>
          </Nav> 
         <Nav pullRight>          
-          <NavItem eventKey={3} href="#">
+          <NavItem eventKey={3} href="#" onClick={this.goToSignIn}>
             Sign out
           </NavItem>
         </Nav>
