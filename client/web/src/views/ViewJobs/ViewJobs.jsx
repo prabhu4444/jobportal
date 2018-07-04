@@ -41,7 +41,7 @@ class ControlledTabs extends React.Component {
     this.setState({ key });
   }
    applyJob(){
-     
+
    }
   
   render() {

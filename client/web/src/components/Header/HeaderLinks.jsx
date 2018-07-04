@@ -11,7 +11,7 @@ class HeaderLinks extends Component {
       value: 'signin'
     };
 }
-
+//goto signin page
 goToSignIn(e) {
     this.setState({ value: 'app' });
     ReactDOM.render(
