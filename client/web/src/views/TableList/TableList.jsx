@@ -2,8 +2,11 @@ import React, { Component } from "react";
 import { Grid, Row, Col, Table,DropdownButton,MenuItem } from "react-bootstrap";
 
 import Card from "../../components/Card/Card.jsx";
+import UserProfile from "../UserProfile/UserProfile.jsx";
 import { thArray, tdArray} from "../../variables/Variables.jsx";
 import Button from "../../components/CustomButton/CustomButton.jsx";
+import ReactDOM from "react-dom";
+
 
 class TableList extends Component {
 
@@ -25,6 +28,13 @@ class TableList extends Component {
 
   onTargetSelect = (key) => {
     console.log(key);
+  }
+
+  onNameClick = () =>{
+    ReactDOM.render(
+      <UserProfile/>,
+      document.getElementById("root")
+    );
   }
 
   render() {
@@ -54,6 +64,7 @@ class TableList extends Component {
                             {prop.map((prop, key) => {
                               console.log("Key ::"+key);
                               switch(key){
+                                 case 1: return  <td onClick={this.onNameClick.bind(this)} key={key}>{prop}</td>;
                                  case 2:return <td>{this.renderDropdownButton(prop, 0)}</td>
                                  case 4:
                                  case 5:return <td><Button bsStyle="info" fill  type="submit">
