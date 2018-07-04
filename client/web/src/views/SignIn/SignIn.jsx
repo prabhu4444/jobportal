@@ -5,7 +5,6 @@ import Button from "../../components/CustomButton/CustomButton.jsx";
 import { Card } from "../../components/Card/Card";
 
 class SignIn extends Component {
-
     constructor(props, context) {
         super(props, context);
     
@@ -61,7 +60,6 @@ class SignIn extends Component {
                             <FormInputs
                                     ncols={["col-md-5"]}
                                     proprieties={[
-
                                         {
                                         label: "Password",
                                         type: "email",
