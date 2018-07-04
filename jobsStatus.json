@@ -1,0 +1,62 @@
+[
+  {
+    "jobId": 1,
+    "userId": 4,
+    "status": "Applied",
+    "Name": "Santosh",
+    "email": "santosh.Job@gmail.com",
+    "role": "Candidate",
+    "password": "test",
+    "fileLocation": "D:/"
+  },
+  {
+    "jobId": 2,
+    "userId": 4,
+    "status": "Rejected",
+    "Name": "Santosh",
+    "email": "santosh.Job@gmail.com",
+    "role": "Candidate",
+    "password": "test",
+    "fileLocation": "D:/"
+  },
+  {
+    "jobId": 3,
+    "userId": 4,
+    "status": "In progress",
+    "Name": "Santosh",
+    "email": "santosh.Job@gmail.com",
+    "role": "Candidate",
+    "password": "test",
+    "fileLocation": "D:/"
+  },
+  {
+    "jobId": 4,
+    "userId": 2,
+    "status": "Created",
+    "Name": "test",
+    "email": "test.Job@gmail.com",
+    "role": "HrUser",
+    "password": "HrUser",
+    "fileLocation": "D:/"
+  },
+  {
+    "jobId": 6,
+    "userId": 1,
+    "status": "Rejected",
+    "Name": "Tapan",
+    "email": "Tapan.Job@gmail.com",
+    "role": "Candidate",
+    "password": "test",
+    "fileLocation": "D:/"
+  },
+  {
+    "jobId": 3,
+    "userId": 3,
+    "status": "Applied",
+    "Name": "Sunil",
+    "email": "sunil.Job@gmail.com",
+    "role": "Candidate",
+    "password": "test",
+    "fileLocation": "D:/"
+  }
+]
