@@ -22,6 +22,7 @@ class SignIn extends Component {
   constructor(props, context) {
       super(props, context);  
       this.handleChange = this.handleChange.bind(this);  
+    
       this.state = {
         value: 'signin'
       };
@@ -78,7 +79,8 @@ class SignIn extends Component {
                                       label: "Email address",
                                       type: "email",
                                       bsClass: "form-control",
-                                      defaultValue: "reactwarriors@verizon.com"
+                                      defaultValue: "reactwarriors@verizon.com",
+                                      
                                       }
                                   ]}
                                   />
@@ -90,7 +92,8 @@ class SignIn extends Component {
                                       label: "Password",
                                       type: "email",
                                       bsClass: "form-control",
-                                      defaultValue: "*********"
+                                      defaultValue: "*********",
+                                     
                                       }
                                   ]}
                           />
